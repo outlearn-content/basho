@@ -23,7 +23,6 @@
       "description": "Walk learners through basic querying operations",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -47,7 +46,6 @@
       "description": "Walk learners through basic object modeling operations",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -71,7 +69,6 @@
       "description": "Get learners using bucket-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -111,7 +108,6 @@
       "description": "Get learners using object-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -139,7 +135,6 @@
       "description": "Get learners using query-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -163,7 +158,6 @@
       "description": "Get learners using server-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -191,7 +185,6 @@
       "description": "Get learners using search-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
       "coverImage" : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
-      "author" : "Basho Technologies, Inc.",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
