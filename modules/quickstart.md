@@ -11,20 +11,14 @@ twitter : "basho"
 -->
 
 
-
-<!-- @section -->
-
-## Overview
+# Overview
 
 In this tutorial, we'll share some quick start installers for OSX, as
 well as provide instructions for building a
 [five-node](http://basho.com/why-your-riak-cluster-should-have-at-least-five-nodes/)
 Riak cluster running on your local machine.
 
-
-<!-- @section -->
-
-## DMG Installer for OSX
+# DMG Installer for OSX
 
 If you would like to explore some of Riak's functionality using a simple,
 self-contained installer for OSX, you may view the
@@ -33,10 +27,7 @@ create a single local instance of Riak so you may familiarize yourself
 with Riak's configuration and administration.  Note that this sample
 application should not be used in a production deployment.
 
-
-<!-- @section -->
-
-## Riak Dev Cluster for OSX
+# Riak Dev Cluster for OSX
 
 To quickly create a five-node local devrel cluster on OSX, you may use the
 [Riak Dev Cluster](https://github.com/basho-labs/riak-dev-cluster/) project.
@@ -44,10 +35,7 @@ This application will easily install and join a cluster of local nodes on OSX
 for testing and administration.  Note that this sample application should not
 be used in a production deployment.
 
-
-<!-- @section -->
-
-## Install Riak
+# Install Riak
 
 The above installers helped you explore the basics of Riak on OSX.  
 For full instructions on installing Riak for your desired operating
@@ -101,10 +89,7 @@ The `make all` command grabs all of Riak's dependencies for you so that
 you don't have to chase them down on your own. This process will likely
 take a few moments.
 
-
-<!-- @section -->
-
-## Start Up Five Nodes
+# Start Up Five Nodes
 
 Now that Riak is built, use [Rebar](https://github.com/basho/rebar), a
 packaging and build system for Erlang applications, to get five
@@ -200,10 +185,7 @@ return its current status:
 for node in dev*; do $node/bin/riak ping; done
 ```
 
-
-<!-- @section -->
-
-## Create the Cluster
+# Create the Cluster
 
 Although you now have five nodes up and running, they are not yet
 connected to one another, i.e. they do not yet form a Riak
@@ -416,10 +398,7 @@ single nodes to listen on is `10018`, and users will need to take note
 of this when trying to use any of the default settings for Riak client
 libraries.  </div>
 
-
-<!-- @section -->
-
-## Setting Up Your Riak Client
+# Setting Up Your Riak Client
 
 Basho maintains official client libraries for Java, Ruby, Python,
 .NET and Erlang. Below are links to client-specific documentation for each
