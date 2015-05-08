@@ -26,10 +26,7 @@ port install py-distribute`. `setuptools` and `pip` are included in the
 Homebrew formula for Python on OS X as well. Just run `brew install
 python`.
 
-
-<!-- @section -->
-
-## Prerequisites
+# Prerequisites
 
 First, you must install some packages needed by the Riak Python client:
 
@@ -43,10 +40,7 @@ First, you must install some packages needed by the Riak Python client:
 sudo apt-get install python-dev libffi-dev libssl-dev
 ```
 
-
-<!-- @section -->
-
-## Client Setup
+# Client Setup
 
 The easiest way to install the client is with `easy_install` or `pip`.
 Either of the commands below will ensure that the client and all its
@@ -69,10 +63,7 @@ Now, let's build the client.
 python setup.py install
 ```
 
-
-<!-- @section -->
-
-## Connecting to Riak
+# Connecting to Riak
 
 Now, let's start the Python REPL and get set up. Enter the following
 into the Python REPL:
@@ -101,10 +92,7 @@ myClient = riak.RiakClient(pb_port=10017, protocol='pbc')
 We are now ready to start interacting with Riak.
 
 
-
-<!-- @section -->
-
-## Creating Objects In Riak
+# Creating Objects In Riak
 
 First, let’s create a few objects and a bucket to keep them in.
 
@@ -135,10 +123,7 @@ key3 = myBucket.new('three', data=val3)
 key3.store()
 ```
 
-
-<!-- @section -->
-
-## Reading Objects From Riak
+# Reading Objects From Riak
 
 Now that we have a few objects stored, let’s retrieve them and make sure
 they contain the values we expect.
@@ -155,10 +140,7 @@ assert val3 == fetched3.data
 
 That was easy. We simply request the objects by key.
 
-
-<!-- @section -->
-
-## Updating Objects In Riak
+# Updating Objects In Riak
 
 While some data may be static, other forms of data may need to be
 updated. This is also easy to accomplish. Let’s update the value of
@@ -169,10 +151,7 @@ fetched3.data["myValue"] = 42
 fetched3.store()
 ```
 
-
-<!-- @section -->
-
-## Deleting Objects From Riak
+# Deleting Objects From Riak
 
 Nothing is complete without a delete. Fortunately, that's easy too.
 
@@ -191,10 +170,7 @@ assert myBucket.get('three').exists == False
 ```
 
 
-
-<!-- @section -->
-
-## Working With Complex Objects
+# Working With Complex Objects
 
 Since the world is a little more complicated than simple integers and
 bits of strings, let’s see how we can work with more complex objects.
@@ -247,10 +223,7 @@ Finally, let’s clean up our mess:
 fetchedBook.delete()
 ```
 
-
-<!-- @section -->
-
-## Next Steps
+# Next Steps
 
 More complex use cases can be composed from these initial create, read,
 update, and delete (CRUD) operations. In the next chapter we will look at how to store and query more complicated
