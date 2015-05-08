@@ -200,7 +200,7 @@
           "location": "./modules/search-index-info.md"
         },
         {
-          "title": "HTTP Featch Search Index",
+          "title": "HTTP Fetch Search Index",
           "location": "./modules/fetch-search-index.md"
         },
         {
@@ -212,7 +212,7 @@
           "location": "./modules/delete-search-index.md"
         },
         {
-          "title": "HTTP Featch Search Schema",
+          "title": "HTTP Fetch Search Schema",
           "location": "./modules/fetch-search-schema.md"
         },
         {
