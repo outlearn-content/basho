@@ -128,12 +128,11 @@ the `start` command in the `bin` directory. Let's start with `dev1`:
 dev1/bin/riak start
 ```
 
-<div class="note">
-<div class="title"><code>ulimit</code> warning</div>
+> **`ulimit` warning**
 At this point, you may receive a warning message to increase the number
 of open file handles, i.e. <code>ulimit</code>, in your operating
 system. See our Open Files Limit guide for platform-specific
-instructions on doing so.  </div>
+instructions on doing so.
 
 Once you've started the node in `dev1`, do the same for `dev2` through
 `dev5`:
@@ -282,19 +281,14 @@ dev2/bin/riak-admin cluster commit
 
 **Note**: Changes to a cluster can be committed from any node.
 
-<div class="info">
-<div class="title">About `riak-admin`</div>
+> **About `riak-admin`**
 `riak-admin` is Riak's administrative tool. It's used to perform any
 operational tasks beyond starting and stopping a node (e.g.  to make a
 node join and leave a cluster), to back up data, and to manage general
 cluster operations. You can read more about the `riak-admin` command in
 the riak-admin command line documentation.
-</div>
 
-
-<!-- @section -->
-
-## Test the Cluster
+# Test the Cluster
 
 Now that we have a running five-node Riak cluster, let's make sure that
 it's working properly. For this we have a couple of options. The
@@ -338,12 +332,11 @@ the valid port in your cluster. That information can be found in
 `/etc/riak.conf` if you're using the newer configuration system or in
 `/etc/app.config` if you're using the older system.
 
-<div class="note">
-<div class="title">Note on the HTTP API</div>
+> **Note on the HTTP API**
 While the HTTP API can be useful for getting started or for running
 basic test operations, we strongly recommend using client libraries
 that utilize Riak's Protocol Buffers API when building
-applications.  </div>
+applications.  
 
 If the `PUT` request above succeeded, that means that you've stored your
 first object in Riak. Now attempt a `GET` request to the same HTTP
@@ -389,14 +382,13 @@ correctly.
 Congratulations! You should now have a five-node Riak cluster up and
 running.
 
-<div class="note">
-<div class="title">HTTP interface ports</div>
+> **HTTP interface ports**
 The above configuration sets up nodes with HTTP interfaces listening on
 ports `10018`, `10028`, `10038`, `10048`, and `10058` for `dev1`,
 `dev2`, `dev3`, `dev4`, and `dev5` respectively. The default port for
 single nodes to listen on is `10018`, and users will need to take note
 of this when trying to use any of the default settings for Riak client
-libraries.  </div>
+libraries.  
 
 # Setting Up Your Riak Client
 
