@@ -8,6 +8,9 @@
       "olm" : "./modules/why-riak.md"
     },
     {
+      "olm" : "./modules/riak-at-kiip.md"
+    },
+    {
       "olm" : "./modules/quickstart.md"
     },
     {
