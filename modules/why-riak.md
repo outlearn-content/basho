@@ -4,7 +4,7 @@ version : "0.1"
 title : "Why Riak"
 description: "Explain what Riak is and what problems it is designed to solve."
 homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
-coverImage : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png",
+coverImage : "http://raw.githubusercontent.com/basho/basho_docs/master/source/images/riak-transparent-larger.png"
 author : "Basho Technologies, Inc."
 license : "CC Attribution 3.0"
 url : "http://basho.com"
