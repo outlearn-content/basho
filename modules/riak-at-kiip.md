@@ -14,4 +14,4 @@ license : "Vimeo"
 
 Armon Dadgar and Mitchell Hashimoto of Kiip tell how they use Riak in production and how they got where they are now.
 
-<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "http://player.vimeo.com/video/42744689" -->
+<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/42744689" -->
