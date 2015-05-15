@@ -25,6 +25,7 @@
       "title" : "Querying Riak in Python",
       "description": "Walk learners through basic querying operations",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "coverImage" : "http://www.publicdomainpictures.net/pictures/40000/velka/mud.jpg",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
@@ -69,6 +70,7 @@
       "title" : "Bucket-related Operations - Riak HTTP API",
       "description": "Get learners using bucket-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "coverImage" : "http://www.publicdomainpictures.net/pictures/110000/velka/rows-of-galvanized-buckets.jpg",
       "license" : "CC Attribution 3.0",
       "contact" : {
   	    "url" : "http://basho.com",
