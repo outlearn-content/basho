@@ -30,17 +30,7 @@
       "contact" : {
   	    "url" : "http://basho.com",
   	    "twitter": "basho"
-  	  },
-      "sections" : [
-        {
-          "title": "Querying",
-          "location": "./modules/querying.md"
-        },
-        {
-          "title": "Querying with Python",
-          "location": "./modules/querying-python.md"
-        }
-      ]
+  	  }
     }
   ],
 
