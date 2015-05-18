@@ -6,8 +6,6 @@ description: "Walk learners through basic CRUD operations."
 homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
 coverImage : "http://www.publicdomainpictures.net/pictures/40000/velka/mud.jpg"
 freshnessDate : 2015-05-18
-url : "http://basho.com"
-twitter : "basho"
 -->
 
 

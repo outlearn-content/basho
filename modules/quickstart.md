@@ -7,8 +7,6 @@ homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
 coverImage : "http://www.publicdomainpictures.net/pictures/110000/velka/antique-typewriter-keys-1417847984qLo.jpg"
 freshnessDate : 2015-05-18
 license : "CC Attribution 3.0"
-url : "http://basho.com"
-twitter : "basho"
 -->
 
 
