@@ -32,6 +32,10 @@
   	    "twitter": "basho"
   	  },
       "sections" : [
+        {
+          "title": "Getting Started",
+          "content": "modules/clojure.md"
+        }
       ]
     }
   ],
