@@ -30,7 +30,9 @@
       "contact" : {
   	    "url" : "http://basho.com",
   	    "twitter": "basho"
-  	  }
+  	  },
+      "sections" : [
+      ]
     }
   ],
 
