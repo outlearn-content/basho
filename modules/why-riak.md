@@ -1,12 +1,13 @@
 <!--
-name: why-riak
-version : "0.1"
-title : "Why Riak"
-description: "Explain what Riak is and what problems it is designed to solve."
-homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
-coverImage : "http://www.publicdomainpictures.net/pictures/80000/velka/network.jpg"
-freshnessDate : 2015-05-18
-license : "CC Attribution 3.0"
+{
+"name" : "why-riak",
+"version" : "0.1",
+"title" : "Why Riak",
+"description" : "Explain what Riak is and what problems it is designed to solve.",
+"homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"freshnessDate" : 2015-05-18,
+"license" : "CC Attribution 3.0"
+}
 -->
 
 

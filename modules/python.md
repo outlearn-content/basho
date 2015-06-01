@@ -1,11 +1,13 @@
 <!--
-name: python
-version : "0.1"
-title : "Riak CRUD Operations in Python"
-description: "Walk learners through basic CRUD operations."
-homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
-coverImage : "http://www.publicdomainpictures.net/pictures/40000/velka/mud.jpg"
-freshnessDate : 2015-05-18
+{
+"name" : "python",
+"version" : "0.1",
+"title" : "Riak CRUD Operations in Python",
+"description" : "Walk learners through basic CRUD operations.",
+"homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"freshnessDate" : 2015-05-18,
+"license" : "CC Attribution 3.0"
+}
 -->
 
 

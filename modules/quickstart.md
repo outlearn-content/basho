@@ -1,12 +1,13 @@
 <!--
-name: quickstart
-version : "0.1"
-title : "Riak Environment Setup"
-description: "Get learners set up with their own local Riak environment."
-homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
-coverImage : "http://www.publicdomainpictures.net/pictures/110000/velka/antique-typewriter-keys-1417847984qLo.jpg"
-freshnessDate : 2015-05-18
-license : "CC Attribution 3.0"
+{
+"name" : "quickstart",
+"version" : "0.1",
+"title" : "Riak Environment Setup",
+"description" : "Get learners set up with their own local Riak environment.",
+"homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"freshnessDate" : 2015-05-18,
+"license" : "CC Attribution 3.0"
+}
 -->
 
 
@@ -40,9 +41,9 @@ The above installers helped you explore the basics of Riak on OSX.
 For full instructions on installing Riak for your desired operating
 system, follow the steps below.
 
-Basho's pre-packaged Riak binaries (found under Downloads) embed the
+Basho's pre-packaged Riak binaries (found under [Downloads](https://docs.basho.com/riak/latest/downloads/)) embed the
 Erlang runtime. This tutorial, however, is based on a source build, so
-you will need to install Erlang if it is not
+you will need to [install Erlang](https://docs.basho.com/riak/latest/ops/building/installing/erlang/) if it is not
 installed on your machine already.
 
 If you wish to build Riak 2.0 from source, we strongly recommend using
@@ -56,22 +57,22 @@ tar -xvf otp_src_R16B02-basho8.tar.gz
 cd otp_src_R16B02-basho8
 ```
 
-Once you have unzipped the package, see our guide to installing
-Erlang for installation instructions.
+Once you have unzipped the package, see our guide to [installing
+Erlang](https://docs.basho.com/riak/latest/ops/building/installing/erlang/) for installation instructions.
 
 ### Get the Source
 
 The following links provide platform-specific instructions for
 downloading and installing Riak from source.
 
-  * Debian and Ubuntu
-  * RHEL and CentOS
-  * Mac OS X
-  * FreeBSD
-  * SUSE
-  * Windows Azure
-  * AWS Marketplace
-  * Unlisted Operating System
+*   [Debian and Ubuntu](https://docs.basho.com/riak/latest/ops/building/installing/debian-ubuntu/#Installing-From-Source)
+*   [RHEL and CentOS](https://docs.basho.com/riak/latest/ops/building/installing/rhel-centos/#Installing-From-Source)
+*   [Mac OS X](https://docs.basho.com/riak/latest/ops/building/installing/mac-osx/#Installing-From-Source)
+*   [FreeBSD](https://docs.basho.com/riak/latest/ops/building/installing/freebsd/#Installing-From-Source)
+*   [SUSE](https://docs.basho.com/riak/latest/ops/building/installing/suse/)
+*   [Windows Azure](https://docs.basho.com/riak/latest/ops/building/installing/azure/)
+*   [AWS Marketplace](https://docs.basho.com/riak/latest/ops/building/installing/aws-marketplace/)
+*   [Unlisted Operating System](https://docs.basho.com/riak/latest/ops/building/installing/from-source/)
 
 ### Build Riak
 
@@ -87,6 +88,8 @@ make all
 The `make all` command grabs all of Riak's dependencies for you so that
 you don't have to chase them down on your own. This process will likely
 take a few moments.
+
+<!-- @task, "text" : "Download the source for your platform and build it."-->
 
 # Start Up Five Nodes
 
@@ -130,7 +133,7 @@ dev1/bin/riak start
 > **`ulimit` warning**
 At this point, you may receive a warning message to increase the number
 of open file handles, i.e. <code>ulimit</code>, in your operating
-system. See our Open Files Limit guide for platform-specific
+system. See our [Open Files Limit](https://docs.basho.com/riak/latest/ops/tuning/open-files-limit/) guide for platform-specific
 instructions on doing so.
 
 Once you've started the node in `dev1`, do the same for `dev2` through
@@ -149,6 +152,7 @@ iterate through and start the available nodes:
 ```bash
 for node in dev*; do $node/bin/riak start; done
 ```
+<!-- @task, "text" : "Start up five nodes."-->
 
 ### Check Running Nodes
 
@@ -182,6 +186,8 @@ return its current status:
 ```bash
 for node in dev*; do $node/bin/riak ping; done
 ```
+
+<!-- @task, "text" : "Check the status of the nodes."-->
 
 # Create the Cluster
 
@@ -287,6 +293,8 @@ node join and leave a cluster), to back up data, and to manage general
 cluster operations. You can read more about the `riak-admin` command in
 the riak-admin command line documentation.
 
+<!-- @task, "text" : "Turn your nodes into a cluster."-->
+
 # Test the Cluster
 
 Now that we have a running five-node Riak cluster, let's make sure that
@@ -391,7 +399,7 @@ libraries.
 
 # Setting Up Your Riak Client
 
-Basho maintains official client libraries for Java, Ruby, Python,
+Basho maintains official [client libraries](https://docs.basho.com/riak/latest/dev/using/libraries/) for Java, Ruby, Python,
 .NET and Erlang. Below are links to client-specific documentation for each
 language:
 
@@ -492,10 +500,10 @@ List<RiakNode> nodes = RiakNode.Builder.buildNodes(nodeBuilder, addresses);
 ```
 
 For some Java code samples to get you started, see our tutorials on
-the basics of Riak, Riak Data Types,
-and Riak Search 2.0, as well as a variety of other
+[the basics of Riak](https://docs.basho.com/riak/latest/dev/using/basics/), [Riak Data Types](https://docs.basho.com/riak/latest/dev/using/data-types/),
+and [Riak Search 2.0](https://docs.basho.com/riak/latest/dev/using/search/), as well as a variety of other
 pages in the **Riak for Developers** section of the documentation (in
-the navbar on the left).
+the navbar on the left [on our documentation site](https://docs.basho.com/riak/latest/)).
 
 ### Ruby
 
@@ -533,9 +541,10 @@ client = Riak::Client.new(nodes: [
 ```
 
 For some Ruby code samples to get you started, see our tutorials on
-the basics of Riak, Riak Data Types,
-data modeling with Riak Data Types, and Riak Search 2.0, as well as a variety of other pages in the **Riak for
-Developers** section of the documentation (in the navbar on the left).
+[the basics of Riak](https://docs.basho.com/riak/latest/dev/using/basics/), [Riak Data Types](https://docs.basho.com/riak/latest/dev/using/data-types/),
+and [Riak Search 2.0](https://docs.basho.com/riak/latest/dev/using/search/), as well as a variety of other
+pages in the **Riak for Developers** section of the documentation (in
+the navbar on the left [on our documentation site](https://docs.basho.com/riak/latest/)).
 
 ### Python
 
@@ -573,10 +582,10 @@ client = RiakClient(protocol='pbc',nodes=[
 ```
 
 For some Python code samples to get you started, see our tutorials on
-the basics of Riak, Riak Data Types,
-and Riak Search 2.0, as well as a variety of other
+[the basics of Riak](https://docs.basho.com/riak/latest/dev/using/basics/), [Riak Data Types](https://docs.basho.com/riak/latest/dev/using/data-types/),
+and [Riak Search 2.0](https://docs.basho.com/riak/latest/dev/using/search/), as well as a variety of other
 pages in the **Riak for Developers** section of the documentation (in
-the navbar on the left).
+the navbar on the left [on our documentation site](https://docs.basho.com/riak/latest/)).
 
 ### .NET
 
@@ -658,10 +667,10 @@ client.shutdown(function (state) {
 ```
 
 For some Node.js code samples to get you started, see our tutorials on
-the basics of Riak, Riak Data Types,
-and Riak Search 2.0, as well as a variety of other
+[the basics of Riak](https://docs.basho.com/riak/latest/dev/using/basics/), [Riak Data Types](https://docs.basho.com/riak/latest/dev/using/data-types/),
+and [Riak Search 2.0](https://docs.basho.com/riak/latest/dev/using/search/), as well as a variety of other
 pages in the **Riak for Developers** section of the documentation (in
-the navbar on the left).
+the navbar on the left [on our documentation site](https://docs.basho.com/riak/latest/)).
 
 ### Erlang
 
@@ -695,7 +704,7 @@ separate process identifiers for each:
 ```
 
 For some Erlang code samples to get you started, see our tutorials on
-the basics of Riak, Riak Data Types,
-and Riak Search 2.0, as well as a variety of other
+[the basics of Riak](https://docs.basho.com/riak/latest/dev/using/basics/), [Riak Data Types](https://docs.basho.com/riak/latest/dev/using/data-types/),
+and [Riak Search 2.0](https://docs.basho.com/riak/latest/dev/using/search/), as well as a variety of other
 pages in the **Riak for Developers** section of the documentation (in
-the navbar on the left).
+the navbar on the left [on our documentation site](https://docs.basho.com/riak/latest/)).

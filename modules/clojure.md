@@ -1,11 +1,13 @@
 <!--
-name: clojure
-version : "0.1"
-title : "Riak with Clojure"
-description: "Get learners using Riak with Clojure."
-homepage : "http://docs.basho.com/riak/latest/dev/taste-of-riak/"
-freshnessDate : 2015-05-18
-license : "CC Attribution 3.0"
+{
+"name" : "clojure",
+"version" : "0.1",
+"title" : "Riak with Clojure",
+"description" : "Get learners using Riak with Clojure.",
+"homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"freshnessDate" : 2015-05-18,
+"license" : "CC Attribution 3.0"
+}
 -->
 
 
