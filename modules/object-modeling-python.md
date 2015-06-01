@@ -239,7 +239,7 @@ another collection object to make lookup faster. There are drawbacks to
 every solution, but we recommend seeking out the key/value-based
 solution first, as it will likely be the quickest.
 
-
+<!-- @task, "text" : "Implement a secondary index following the pattern above." -->
 
 So to recap, in this chapter we learned:
 
