@@ -239,6 +239,8 @@ another collection object to make lookup faster. There are drawbacks to
 every solution, but we recommend seeking out the key/value-based
 solution first, as it will likely be the quickest.
 
+<!-- @task, "text" : "Try out the \'Msgy\' app example".-->
+
 So to recap, in this chapter we learned:
 
 * How to choose bucket names
