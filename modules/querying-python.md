@@ -208,7 +208,7 @@ Which returns:
 
 Boom, easy-peasy.  We used 2i's range feature to search for a range of values, and demonstrated binary indexes.  
 
-<!-- @task, "text" : "Implement a secondary index following the pattern above."-->
+<!-- @task, "text" : "Implement a secondary index following the pattern above." -->
 
 So to recap:
 
