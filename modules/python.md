@@ -26,6 +26,8 @@ port install py-distribute`. `setuptools` and `pip` are included in the
 Homebrew formula for Python on OS X as well. Just run `brew install
 python`.
 
+<!-- @task, "text" : "Check that you have Python and \'setuptools\' or \'pip\' installed."-->
+
 # Prerequisites
 
 First, you must install some packages needed by the Riak Python client:
@@ -33,6 +35,8 @@ First, you must install some packages needed by the Riak Python client:
 * `python-dev` --- Header files and a static library for Python
 * `libffi-dev` --- Foreign function interface library
 * `libssl-dev` --- libssl and libcrypto development libraries
+
+<!-- @task, "text" : "Install the required packages."-->
 
 ### Ubuntu (12.04 & 14.04)
 
@@ -63,6 +67,8 @@ Now, let's build the client.
 python setup.py install
 ```
 
+<!-- @task, "text" : "Install and build the client."-->
+
 # Connecting to Riak
 
 Now, let's start the Python REPL and get set up. Enter the following
@@ -88,6 +94,7 @@ method, use this code snippet instead:
 ```python
 myClient = riak.RiakClient(pb_port=10017, protocol='pbc')
 ```
+<!-- @task, "text" : "Connect to the client."-->
 
 We are now ready to start interacting with Riak.
 
@@ -123,6 +130,8 @@ key3 = myBucket.new('three', data=val3)
 key3.store()
 ```
 
+<!-- @task, "text" : "Create objects."-->
+
 # Reading Objects From Riak
 
 Now that we have a few objects stored, let’s retrieve them and make sure
@@ -140,6 +149,8 @@ assert val3 == fetched3.data
 
 That was easy. We simply request the objects by key.
 
+<!-- @task, "text" : "Read objects."-->
+
 # Updating Objects In Riak
 
 While some data may be static, other forms of data may need to be
@@ -150,6 +161,8 @@ myValue in the 3rd example to `42`.
 fetched3.data["myValue"] = 42
 fetched3.store()
 ```
+
+<!-- @task, "text" : "Update objects."-->
 
 # Deleting Objects From Riak
 
@@ -169,6 +182,7 @@ assert myBucket.get('two').exists == False
 assert myBucket.get('three').exists == False
 ```
 
+<!-- @task, "text" : "Delete objects."-->
 
 # Working With Complex Objects
 
@@ -213,6 +227,8 @@ JSON! The Riak Python client library encodes things as JSON when it can.
 "author": "Herman Melville", "isbn": "1111979723",
 "copies_owned": 3, "title": "Moby Dick"}
 ```
+
+<!-- @task, "text" : "Create a complex object and print out the JSON output."-->
 
 If we wanted to get a deserialized object back we would just use the
 regular `fetchedBook.data` method.
