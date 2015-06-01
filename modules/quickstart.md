@@ -11,7 +11,10 @@
 -->
 
 
-# Overview
+
+<!-- @section -->
+
+## Overview
 
 In this tutorial, we'll share some quick start installers for OSX, as
 well as provide instructions for building a
@@ -35,7 +38,10 @@ This application will easily install and join a cluster of local nodes on OSX
 for testing and administration.  Note that this sample application should not
 be used in a production deployment.
 
-# Install Riak
+
+<!-- @section -->
+
+## Install Riak
 
 The above installers helped you explore the basics of Riak on OSX.  
 For full instructions on installing Riak for your desired operating
@@ -90,6 +96,11 @@ you don't have to chase them down on your own. This process will likely
 take a few moments.
 
 <!-- @task, "text" : "Download the source for your platform and build it."-->
+
+
+<!-- @section -->
+
+## Create a Cluster
 
 # Start Up Five Nodes
 
@@ -397,7 +408,12 @@ single nodes to listen on is `10018`, and users will need to take note
 of this when trying to use any of the default settings for Riak client
 libraries.  
 
-# Setting Up Your Riak Client
+<!-- @task, "text" : "Test your cluster."-->
+
+
+<!-- @section -->
+
+## Setting Up Your Riak Client
 
 Basho maintains official [client libraries](https://docs.basho.com/riak/latest/dev/using/libraries/) for Java, Ruby, Python,
 .NET and Erlang. Below are links to client-specific documentation for each
@@ -416,6 +432,8 @@ establishing a client connection to Riak in each of the four official
 clients. In each case, it will be assumed that the client has been
 successfully installed and that your application has been configured to
 use it.
+
+<!-- @task, "text" : "Choose your client from the list and set it up."-->
 
 ### Java
 
