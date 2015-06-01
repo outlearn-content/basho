@@ -58,6 +58,10 @@
         {
           "title": "Object Modeling",
           "content": "./modules/object-modeling.md"
+        },
+        {
+          "title": "Object Modeling with Python",
+          "content": "./modules/object-modeling-python.md"
         }
       ]
     },
