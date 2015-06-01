@@ -18,6 +18,52 @@
     },
     {
       "olm" : "./modules/clojure.md"
+    },
+    {
+      "name": "querying-python",
+      "version" : "0.1",
+      "title" : "Querying Riak in Python",
+      "description": "Walk learners through basic querying operations",
+      "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "freshnessDate" : 2015-05-18,
+      "license" : "CC Attribution 3.0",
+      "contact" : {
+  	    "url" : "http://basho.com",
+  	    "twitter": "basho"
+  	  },
+      "sections" : [
+        {
+          "title": "Querying",
+          "content": "./modules/querying.md"
+        },
+        {
+          "title": "Querying with Python",
+          "content": "./modules/querying-python.md"
+        }
+      ]
+    },
+    {
+      "name": "object-modeling-python",
+      "version" : "0.1",
+      "title" : "Riak Object Modeling in Python",
+      "description": "Walk learners through basic object modeling operations",
+      "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "freshnessDate" : 2015-05-18,
+      "license" : "CC Attribution 3.0",
+      "contact" : {
+  	    "url" : "http://basho.com",
+  	    "twitter": "basho"
+  	  },
+      "sections" : [
+        {
+          "title": "Object Modeling",
+          "content": "./modules/object-modeling.md"
+        },
+        {
+          "title": "Object Modeling with Python",
+          "content": "./modules/object-modeling-python.md"
+        }
+      ]
     }
   ],
 
