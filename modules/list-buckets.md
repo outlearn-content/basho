@@ -2,10 +2,10 @@
 
 Lists all known buckets (ones that have keys stored in them).
 
-<div class="note"><div class="title">Not for production use</div>
+> **Not for production use:**
 Similar to the list keys operation, this requires traversing all keys stored
 in the cluster and should not be used in production.
-</div>
+
 
 
 <!-- @section -->
