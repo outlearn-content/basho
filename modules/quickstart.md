@@ -5,6 +5,7 @@
 "title" : "Riak Environment Setup",
 "description" : "Get learners set up with their own local Riak environment.",
 "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"canonicalSource" : "http://docs.basho.com/riak/latest/quickstart/",
 "freshnessDate" : 2015-05-18,
 "license" : "CC Attribution 3.0"
 }

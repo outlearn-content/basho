@@ -1,11 +1,14 @@
 <!--
-name: riak-at-kiip
-version : "0.1"
-title : "Scaling Riak at Kiip"
-description: "Set expectations and assess initial confidence."
-homepage : "http://basho.com/scaling-riak-at-kiip/"
-freshnessDate : 2015-05-18
-license : "Vimeo"
+{
+"name" : "riak-at-kiip",
+"version" : "0.1",
+"title" : "Scaling Riak at Kiip",
+"description" : "Check out a case study of Riak use",
+"homepage" : "http://basho.com/scaling-riak-at-kiip/",
+"canonicalSource" : "http://basho.com/scaling-riak-at-kiip/",
+"freshnessDate" : 2015-05-18,
+"license" : "Vimeo"
+}
 -->
 
 <!-- @section -->

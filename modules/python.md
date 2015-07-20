@@ -5,6 +5,7 @@
 "title" : "Riak CRUD Operations in Python",
 "description" : "Walk learners through basic CRUD operations.",
 "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"canonicalSource" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/python/",
 "freshnessDate" : 2015-05-18,
 "license" : "CC Attribution 3.0"
 }

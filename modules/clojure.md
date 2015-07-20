@@ -5,6 +5,7 @@
 "title" : "Riak with Clojure",
 "description" : "Get learners using Riak with Clojure.",
 "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+"canonicalSource" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/clojure/",
 "freshnessDate" : 2015-05-18,
 "license" : "CC Attribution 3.0"
 }

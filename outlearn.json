@@ -15,6 +15,7 @@
       "title" : "Querying Riak in Python",
       "description": "Walk learners through basic querying operations",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/querying/",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
       "contact" : {
@@ -32,6 +33,7 @@
       "title" : "Riak Object Modeling in Python",
       "description": "Walk learners through basic object modeling operations",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/object-modeling/",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
       "contact" : {
@@ -49,6 +51,7 @@
       "title" : "Bucket-related Operations - Riak HTTP API",
       "description": "Get learners using bucket-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/references/http/get-bucket-props/",
       "coverImage" : "http://www.publicdomainpictures.net/pictures/110000/velka/rows-of-galvanized-buckets.jpg",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
@@ -71,6 +74,7 @@
       "title" : "Object-related Operations - Riak HTTP API",
       "description": "Get learners using object-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/references/http/fetch-object/",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
       "contact" : {
@@ -89,6 +93,7 @@
       "title" : "Query-related Operations - Riak HTTP API",
       "description": "Get learners using query-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/references/http/mapreduce/",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
       "contact" : {
@@ -106,6 +111,7 @@
       "title" : "Server-related Operations - Riak HTTP API",
       "description": "Get learners using server-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/references/http/ping/",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
       "contact" : {
@@ -124,6 +130,7 @@
       "title" : "Search-related Operations - Riak HTTP API",
       "description": "Get learners using search-related operations with Riak HTTP API and curl.",
       "homepage" : "http://docs.basho.com/riak/latest/dev/taste-of-riak/",
+      "canonicalSource" : "http://docs.basho.com/riak/latest/dev/references/http/search-query/",
       "freshnessDate" : 2015-05-18,
       "license" : "CC Attribution 3.0",
       "contact" : {
