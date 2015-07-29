@@ -30,6 +30,10 @@
   ],
 
   "modules" : [
+    {"olm" : "./modules/high-read-write.md"},
+    {"olm" : "./modules/content-management-social.md"},
+    {"olm" : "./modules/key-value-modeling.md"},
+    {"olm" : "./modules/migrating-to-riak.md"},
     {"olm" : "./modules/why-riak.md"},
     {"olm" : "./modules/riak-at-kiip.md"},
     {"olm" : "./modules/quickstart.md"},
