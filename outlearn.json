@@ -1,7 +1,33 @@
 {
   "olpVersion" : "0.1",
 
-  "paths" : [],
+  "paths" : [
+    {
+      "name" : "riak-data-modeling",
+      "title" : "Riak Data Modeling",
+      "description" : "Riak is a flexible data storage technology capable of addressing a wide variety of problems in a scalable way. In this guide, we'll list a number of use cases and data models that are a good fit for Riak. All of these use cases are already being used in production for projects large and small. We'll also suggest possibilities for implementation and provide links to videos and documentation for further exploration.",
+      "privacy" : "public",
+      "pages" : [
+        {"page" : "./pages/use-cases.md"},
+        {"module" : "high-read-write"},
+        {"module" : "content-management-social"},
+        {"page" : "./pages/key-value-modeling-page.md"},
+        {"module" : "key-value-modeling"},
+        {"page" : "./pages/next-steps-data-modeling.md"}
+      ]
+    },
+    {
+      "name" : "migrating-sql-to-riak",
+      "title" : "Migrating from an SQL Database to Riak",
+      "description" : "Relational databases are powerful and reliable technologies, but there are many use cases for which Riak is a better fit, e.g. when data availability is more important than SQL-style queryability or when relational databases begin to run into scalability problems. If you decide that Riak is a better fit, this tutorial walks you through migrating from an SQL system to Riak.",
+      "privacy" : "public",
+      "pages" : [
+        {"page" : "./pages/welcome.md"},
+        {"module" : "migrating-to-riak"},
+        {"page" : "./pages/next-steps-migrating.md"}
+      ]
+    }
+  ],
 
   "modules" : [
     {"olm" : "./modules/why-riak.md"},
