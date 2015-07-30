@@ -2,7 +2,7 @@
 {
 "name" : "content-management-social",
 "version" : "0.1",
-"title" : "Content Management Social",
+"title" : "Riak Use Cases: Content Management, Social Applications",
 "description" : "TBD.",
 "freshnessDate" : 2015-07-30,
 "homepage" : "http://docs.basho.com/riak/latest/dev/data-modeling/",
@@ -10,6 +10,12 @@
 "license" : "All Rights Reserved"
 }
 -->
+
+<!-- @section -->
+
+# Overview
+
+The following application types require more subtle relationships between objects, e.g. one-to-many and many-to-many relationships.
 
 <!-- @section -->
 

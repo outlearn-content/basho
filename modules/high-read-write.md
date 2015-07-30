@@ -2,7 +2,7 @@
 {
 "name" : "high-read-write",
 "version" : "0.1",
-"title" : "High Read/Write, Simple Applications",
+"title" : "Riak Use Cases: High Read/Write, Simple Applications",
 "description" : "TBD.",
 "freshnessDate" : 2015-07-30,
 "homepage" :   "http://docs.basho.com/riak/latest/dev/data-modeling/",
@@ -10,6 +10,10 @@
 "license" : "All Rights Reserved"
 }
 -->
+<!-- @section -->
+# Overview
+
+The following are examples of Riak use cases that require high read/write performance without necessarily utilizing complex data structures.
 
 <!-- @section -->
 
