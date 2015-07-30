@@ -205,7 +205,7 @@ bucket = client.bucket_type('sets').bucket('user_info_sets')
 user_id_set = Set(bucket, 'usernames')
 ```
 
-Getting started with Riak clients
+>Getting started with Riak clients
 If you are connecting to Riak using one of Basho's official [client
 libraries](http://docs.basho.com/riak/latest/dev/using/libraries/), you can find more information about getting started with
 your client in our [quickstart guide](http://docs.basho.com/riak/latest/quickstart/#setting-up-your-riak-client).
