@@ -38,7 +38,7 @@ In the advertising industry, being able to serve ads quickly to many users and p
 
 ### Serving Advertisements Community Examples
 
-<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "http://player.vimeo.com/video/49775483" -->
+<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/49775483" -->
 
 Los Angeles-based OpenX will serves trillions of ads a year. In this talk, Anthony Molinaro, Engineer at OpenX, goes in depth on their architecture, how they’ve built their system, and why/how they’re switching to Riak for data storage after using databases like CouchDB and Cassandra in production.
 
@@ -105,11 +105,11 @@ Note than in Riak you cannot append information to an object, so adding events i
 
 ### User Events and Timelines Community Examples
 
-<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "http://player.vimeo.com/video/21598799" -->
+<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/21598799" -->
 
 This video was recorded at the March 2012 San Francisco Riak Meetup and is worth every minute of your time. Coda Hale and Ryan Kennedy of Yammer give an excellent and in depth look into how they built “Streamie”, user notifications, why Riak was the right choice, and the lessons learned in the process. Read more and get the slides in the Riak blog [here.](http://basho.com/blog/technical/2011/03/28/Riak-and-Scala-at-Yammer/)
 
-<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "http://player.vimeo.com/video/44498491" -->
+<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/44498491" -->
 
 The team at Voxer has long relied on Riak as their primary data store for various production services. They have put Riak through its paces and have served as one of our more exciting customers and use cases: Riak was in place when they shot to the top of the App Store at the end of 2011\. We also love them because they open-sourced their Node.js client. Read more and get the slides in the Riak blog [here.](http://basho.com/blog/technical/2012/06/27/Riak-at-Voxer/)
 
