@@ -23,7 +23,8 @@ find out more in [Why Riak](http://docs.basho.com/riak/latest/theory/why-riak/).
 this tutorial walks you through migrating from an SQL system to Riak.
 
 >**Use cases warning**
-Because data models vary so widely, it is difficult if not impossible to
+
+>Because data models vary so widely, it is difficult if not impossible to
 generalize across all potential paths from an SQL database to Riak. This
 document is intended only to suggest one possible approach to SQL data
 migration&mdash;an approach that may not work well with your use case.
