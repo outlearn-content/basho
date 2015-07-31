@@ -55,6 +55,8 @@ would find in most programming languages. Below is an example from
 `simpsons` contains keys for all of the available seasons, while each
 key houses a hash for each episode of that season:
 
+#### Ruby
+
 ```ruby
 simpsons = {
   'season 1': {
@@ -72,6 +74,8 @@ simpsons = {
 
 If we want to find out the title of an episode, we can retrieve it based
 on hash keys:
+
+#### Ruby
 
 ```ruby
 simpsons['season 4']['episode 12']
@@ -315,7 +319,7 @@ class User:
 
 # Using the "user_id_set" object from above
 def store_record(user):
-	# First we create an empty object and specify its bucket and key
+  # First we create an empty object and specify its bucket and key
     obj = RiakObject(client, 'users', user.username)
 
     # We'll keep it simple by storing plain text for each user's info
@@ -371,7 +375,7 @@ def fetch_all_user_records
   user_records = Array.new
   $user_id_set.members.each do |user_id|
     user_record = users_bucket.get(user_id).data
-   	user_records.push(user_record)
+     user_records.push(user_record)
   end
   user_records
 end
@@ -408,10 +412,10 @@ function fetch_users()
 ```python
 # We'll create a generator object that will yield a list of Riak objects
 def fetch_all_user_records():
-	users_bucket = client.bucket('users')
+  users_bucket = client.bucket('users')
     user_id_list = list(user_id_set.reload().value)
     for user_id in user_id_list:
-    	yield users_bucket.get(user_id)
+      yield users_bucket.get(user_id)
 
 # We can retrieve that list of Riak objects later on
 list(fetch_all_user_records())
