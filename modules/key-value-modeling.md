@@ -502,6 +502,8 @@ the same configuration but have different names.
 Here's an example of creating four bucket types that only extend Riak's
 defaults:
 
+#### Shell
+
 ```bash
 riak-admin bucket-type create john
 riak-admin bucket-type create robert
@@ -511,6 +513,8 @@ riak-admin bucket-type create john-paul
 
 Or you can create five different bucket types that all set `n_val` to 2
 but have different names:
+
+#### Shell
 
 ```bash
 riak-admin bucket-type create earth '{"props":{"n_val":2}}'
@@ -545,6 +549,8 @@ GET/PUT/DELETE /types/<good or bad>/buckets/<season>/keys/<episode number>
 That adds an additional layer of namespacing and enables us to think
 about our data in terms of a deeper hash than in the example above:
 
+#### Ruby
+
 ```ruby
 simpsons = {
   'good': {
@@ -563,6 +569,8 @@ simpsons = {
 ```
 
 We can fetch the title of season 8, episode 6:
+
+#### Ruby
 
 ```ruby
 # For the sake of example, we'll classify season 8 as good:
