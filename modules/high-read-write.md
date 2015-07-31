@@ -21,6 +21,18 @@ The following are examples of Riak use cases that require high read/write perfor
 
 Riak was originally created to serve as a highly scalable session store. This is an ideal use case for Riak, which is always most performant and predictable when used as a key/value store. Since user and session IDs are usually stored in cookies or otherwise known at lookup time, Riak is able to serve these requests with predictably low latency. Riak's content-type agnosticism also imposes no restrictions on the value, so session data can be encoded in many ways and can evolve without administrative changes to schemas.
 
+<!-- @multipleChoice -->
+
+In an ideal Riak use case
+
+- [X] Keys are known at lookup time
+- [ ] Schemas are clearly defined beforehand
+- [ ] Latency is variable but generally low
+
+Read again the previous paragraph to refresh your memory.
+
+<!-- @end -->
+
 ### Complex Session Storage Case
 
 Riak has features that allow for more complex session storage use cases. The [Bitcask](http://docs.basho.com/riak/latest/ops/advanced/backends/bitcask/) storage backend, for example, supports automatic expiry of keys, which frees application developers from implementing manual session expiry. Riak's [MapReduce](http://docs.basho.com/riak/latest/dev/using/mapreduce/) system can also be used to perform batch processing analysis on large bodies of session data, for example to compute the average number of active users. If sessions must be retrieved using multiple keys (e.g. a UUID or email address), [using secondary indexes](http://docs.basho.com/riak/latest/dev/using/2i/) can provide an easy solution.
@@ -30,6 +42,8 @@ Riak has features that allow for more complex session storage use cases. The [Bi
 <!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/42744689"  -->
 
 In this talk, recorded at the May 2012 San Francisco Riak Meetup, Armon Dadgar and Mitchell Hashimoto of Kiip give an overview of how and why they are using Riak in production, and the road they took to get there. One of the first subsystems they switched over to Riak was Sessions. You can also read the blog post and catch the slides [here.](http://basho.com/blog/technical/2012/05/25/Scaling-Riak-At-Kiip/)
+
+ <!-- @task, "hasDeliverable" : true, "text" : "Watch the video \"Scaling Riak at Kiip\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
 
 <!-- @section -->
 
@@ -46,6 +60,8 @@ In the advertising industry, being able to serve ads quickly to many users and p
 <!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/49775483" -->
 
 Los Angeles-based OpenX will serves trillions of ads a year. In this talk, Anthony Molinaro, Engineer at OpenX, goes in depth on their architecture, how they’ve built their system, and why/how they’re switching to Riak for data storage after using databases like CouchDB and Cassandra in production.
+
+ <!-- @task, "hasDeliverable" : true, "text" : "Watch the video \"Riak at OpenX\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
 
 <!-- @section -->
 
@@ -65,6 +81,8 @@ For storing a large amount of log data that is frequently written to Riak, some 
 
 Simon Buckle on [analyzing Apache logs with Riak.](http://www.simonbuckle.com/2011/08/27/analyzing-apache-logs-with-riak/)
 
+ <!-- @task, "hasDeliverable" : true, "text" : "Read the article about \"Analyzing Apache logs with Riak\" and write a short summary of those points in the article that matter most to you. Submit your summary here."-->
+ 
 <!-- @section -->
 
 ## Sensor Data
