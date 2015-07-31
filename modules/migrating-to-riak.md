@@ -37,6 +37,8 @@ Let's say that we've been storing a series of blog posts in
 [PostgreSQL](http://www.postgresql.org/), in a database called `blog`
 and a table called `posts`. This table has the following schema:
 
+#### Sql
+
 ```sql
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
@@ -48,6 +50,8 @@ CREATE TABLE posts (
 ```
 
 A typical post looks like this when queried:
+
+#### Sql
 
 ```sql
 SELECT * FROM posts WHERE id = 99;
@@ -90,6 +94,8 @@ Using the pysopg2 library, we can establish a connection to our database
 object that will allow us to interact with the `posts` table using
 traditional SQL commands:
 
+#### Python
+
 ```python
 import psycopg2
 
@@ -100,6 +106,8 @@ cursor = connection.cursor()
 With that cursor, we'll execute a `SELECT * FROM posts` query and then
 fetch the information from the cursor using the `fetchall` function:
 
+#### Python
+
 ```python
 cursor.execute('SELECT * FROM posts')
 table = cursor.fetchall()
@@ -107,6 +115,8 @@ table = cursor.fetchall()
 
 The `table` object consists of a Python list of tuples that looks
 something like this:
+
+#### Python
 
 ```python
 [(1, 'John Doe', 'Post 1 title', 'Post body ...', datetime.date(2014, 1, 1)),
@@ -147,19 +157,24 @@ makes this fairly simple. We can use the `strftime` function to
 convert the `date` column into a formatted string. We'll use a
 month-day-year format, i.e. `%m-%d-%Y`.
 
+#### Python
+
+
 ```python
 import datetime
 
 def convert_row_to_dict(row):
-	return {
-		'author': row[1],
-		'title': row[2],
-		'body': row[3],
-		'created': row[4].strftime('%m-%d-%Y')
-	}
+  return {
+    'author': row[1],
+    'title': row[2],
+    'body': row[3],
+    'created': row[4].strftime('%m-%d-%Y')
+  }
 ```
 
 That will convert each row into a dictionary that looks like this:
+
+#### JSON
 
 ```json
 {
@@ -186,21 +201,26 @@ things:
 
 Here's our function:
 
+#### Python
+
+
 ```python
 bucket = client.bucket('posts')
 
 def store_row_in_riak(row):
-	key = row[2][0:29].lower().replace(' ', '-')
-	obj = RiakObject(client, bucket, key)
-	obj.content_type = 'application/json'
-	obj.data = convert_row_to_dict(row)
-	obj.store()
+  key = row[2][0:29].lower().replace(' ', '-')
+  obj = RiakObject(client, bucket, key)
+  obj.content_type = 'application/json'
+  obj.data = convert_row_to_dict(row)
+  obj.store()
 ```
 
 As stated above, we'll want to store all of the objects' keys in a
 [Riak set](http://docs.basho.com/riak/latest/theory/concepts/crdts/#sets) to assist us in querying the objects in the
 future. We'll modify the `store_row_in_riak` function above to add each
 key to a set:
+
+#### Python
 
 ```python
 from riak.datatypes import Set
@@ -209,25 +229,29 @@ objects_bucket = client.bucket('posts')
 key_set = Set(client.bucket_type('sets').bucket('key_sets'), 'posts')
 
 def store_row_in_riak(row):
-	key = row[0]
-	obj = RiakObject(client, bucket, key)
-	obj.content_type = 'application/json'
-	obj.data = convert_row_to_dict(row)
-	obj.store()
+  key = row[0]
+  obj = RiakObject(client, bucket, key)
+  obj.content_type = 'application/json'
+  obj.data = convert_row_to_dict(row)
+  obj.store()
 ```
 
 Now we can write an iterator that stores all rows:
+
+#### Python
 
 ```python
 # Using our "table" object from above:
 
 for row in table:
-	store_row_in_riak(row)
+  store_row_in_riak(row)
 ```
 
 Once all of those objects have been stored in Riak, we can perform
 normal key/value operations to fetch them one by one. Here's an example,
 using curl and Riak's [HTTP API](http://docs.basho.com/riak/latest/dev/references/http/):
+
+#### HTTP
 
 ```curl
 curl http://localhost:8098/buckets/posts/keys/99
@@ -235,6 +259,8 @@ curl http://localhost:8098/buckets/posts/keys/99
 
 That will return a JSON object containing one of the blog posts from our
 original table:
+
+#### JSON
 
 ```json
 {
@@ -251,6 +277,8 @@ Previously, we stored the keys for all of our objects in a
 of the keys from that set and in turn all of the objects corresponding
 to those keys:
 
+#### Python
+
 ```python
 from riak.datatypes import Set
 
@@ -258,9 +286,9 @@ set_bucket = client.bucket_type('sets').bucket('key_sets')
 posts_bucket = client.bucket('posts')
 
 def fetch_all_objects(table_name):
-	keys = Set(client, bucket, table_name)
-	for key in keys:
-		return posts_bucket.get(key)
+  keys = Set(client, bucket, table_name)
+  for key in keys:
+    return posts_bucket.get(key)
 
 fetch_all_objects('posts')
 ```
@@ -281,6 +309,9 @@ those posts.
 Let's say that we stored all of our blog posts with keywords attached,
 and that our original schema actually looked like this:
 
+#### Sql
+
+
 ```sql
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
@@ -294,44 +325,53 @@ CREATE TABLE posts (
 
 Here's an example insert into that table:
 
+
+#### Sql
+
 ```sql
 INSERT INTO posts (author, title, body, created, keywords) VALUES
-	('Basho', 'Moving from MySQL to Riak', 'Traditional database architectures...',
-	current_date, '{"mysql","riak","migration","rdbms"}');
+  ('Basho', 'Moving from MySQL to Riak', 'Traditional database architectures...',
+  current_date, '{"mysql","riak","migration","rdbms"}');
 ```
 
 What we can do now is add a binary secondary index for each of these
 keywords to each post. Let's write a function to take a Riak object
 and attach a binary secondary index for each keyword:
 
+#### Python
+
 ```python
 def add_keyword_2i_to_object(obj, keywords):
-	for keyword in keywords:
-		obj.add_index('keywords_bin', keyword)
+  for keyword in keywords:
+    obj.add_index('keywords_bin', keyword)
 ```
 
 Then we can insert that function into the `store_row_in_riak` function
 that we created above:
 
+#### Python
+
 ```python
 bucket = client.bucket('posts')
 
 def store_row_in_riak(row):
-	obj = RiakObject(client, bucket, row[0])
-	obj.content_type = 'application/json'
-	obj.data = convert_row_to_dict(row)
-	add_keyword_2i_to_object(obj, row[5])
-	obj.store()
+  obj = RiakObject(client, bucket, row[0])
+  obj.content_type = 'application/json'
+  obj.data = convert_row_to_dict(row)
+  add_keyword_2i_to_object(obj, row[5])
+  obj.store()
 ```
 
 Now, we can fetch blog posts on the basis of their keywords:
+
+#### Python
 
 ```python
 bucket = client.bucket('posts')
 
 def fetch_posts_by_keyword(keyword):
-	for key in bucket.get_index('keywords_bin', keyword):
-		return bucket.get(key)
+  for key in bucket.get_index('keywords_bin', keyword):
+    return bucket.get(key)
 ```
 
 This will then return a list of objects marked with keyword metadata.
