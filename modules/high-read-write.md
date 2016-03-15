@@ -39,11 +39,11 @@ Riak has features that allow for more complex session storage use cases. The [Bi
 
 ### Session Storage Community Examples
 
-<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/42744689"  -->
+<!-- @resource, "url": "https://player.vimeo.com/video/42744689"  -->
 
 In this talk, recorded at the May 2012 San Francisco Riak Meetup, Armon Dadgar and Mitchell Hashimoto of Kiip give an overview of how and why they are using Riak in production, and the road they took to get there. One of the first subsystems they switched over to Riak was Sessions. You can also read the blog post and catch the slides [here.](http://basho.com/blog/technical/2012/05/25/Scaling-Riak-At-Kiip/)
 
- <!-- @task, "hasDeliverable" : true, "text" : "Watch the video \"Scaling Riak at Kiip\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
+ <!-- @openResponse, "text" : "Watch the video \"Scaling Riak at Kiip\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
 
 <!-- @section -->
 
@@ -57,11 +57,11 @@ In the advertising industry, being able to serve ads quickly to many users and p
 
 ### Serving Advertisements Community Examples
 
-<!-- @asset, "contentType": "outlearn/video", "provider": "vimeo", "url": "https://player.vimeo.com/video/49775483" -->
+<!-- @resource, "url": "https://player.vimeo.com/video/49775483" -->
 
 Los Angeles-based OpenX will serves trillions of ads a year. In this talk, Anthony Molinaro, Engineer at OpenX, goes in depth on their architecture, how they’ve built their system, and why/how they’re switching to Riak for data storage after using databases like CouchDB and Cassandra in production.
 
- <!-- @task, "hasDeliverable" : true, "text" : "Watch the video \"Riak at OpenX\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
+ <!-- @openResponse "text" : "Watch the video \"Riak at OpenX\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
 
 <!-- @section -->
 
@@ -81,8 +81,8 @@ For storing a large amount of log data that is frequently written to Riak, some 
 
 Simon Buckle on [analyzing Apache logs with Riak.](http://www.simonbuckle.com/2011/08/27/analyzing-apache-logs-with-riak/)
 
- <!-- @task, "hasDeliverable" : true, "text" : "Read the article about \"Analyzing Apache logs with Riak\" and write a short summary of those points in the article that matter most to you. Submit your summary here."-->
- 
+ <!-- @openResponse, "text" : "Read the article about \"Analyzing Apache logs with Riak\" and write a short summary of those points in the article that matter most to you. Submit your summary here."-->
+
 <!-- @section -->
 
 ## Sensor Data
