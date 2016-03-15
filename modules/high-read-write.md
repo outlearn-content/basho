@@ -61,7 +61,7 @@ In the advertising industry, being able to serve ads quickly to many users and p
 
 Los Angeles-based OpenX will serves trillions of ads a year. In this talk, Anthony Molinaro, Engineer at OpenX, goes in depth on their architecture, how they’ve built their system, and why/how they’re switching to Riak for data storage after using databases like CouchDB and Cassandra in production.
 
- <!-- @openResponse "text" : "Watch the video \"Riak at OpenX\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
+ <!-- @openResponse, "text" : "Watch the video \"Riak at OpenX\" and write a short summary of those points in the video that matter most to you. Submit your summary here."-->
 
 <!-- @section -->
 
