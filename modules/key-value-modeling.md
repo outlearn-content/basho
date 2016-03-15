@@ -55,7 +55,7 @@ would find in most programming languages. Below is an example from
 `simpsons` contains keys for all of the available seasons, while each
 key houses a hash for each episode of that season:
 
-#### Ruby
+
 
 ```ruby
 simpsons = {
@@ -75,7 +75,7 @@ simpsons = {
 If we want to find out the title of an episode, we can retrieve it based
 on hash keys:
 
-#### Ruby
+
 
 ```ruby
 simpsons['season 4']['episode 12']
@@ -170,7 +170,8 @@ type](http://docs.basho.com/riak/latest/dev/using/data-types/#setting-up-buckets
 
 We can interact with that set on the basis of its location:
 
-#### Java
+
+<!-- @codeBlock -->
 
 ```java
 Location userIdSet = new Location(new Namespace("sets", "user_info_sets"), "usernames");
@@ -178,9 +179,6 @@ Location userIdSet = new Location(new Namespace("sets", "user_info_sets"), "user
 // With this Location, we can construct fetch operations like this:
 FetchSet fetchUserIdSet = new FetchSet.Builder(userIdSet).build();
 ```
-
-#### Ruby
-
 ```ruby
 require 'riak'
 
@@ -191,23 +189,18 @@ set_bucket = client.bucket('user_info_sets')
 
 $user_id_set = Riak::Crdt::Set.new(set_bucket, 'usernames', 'sets')
 ```
-
-#### PHP
-
 ```php
 $command = (new \Basho\Riak\Command\Builder\FetchSet($riak))
     ->buildLocation('usernames', 'user_info_sets', 'sets')
     ->build();
 ```
-
-#### Python
-
 ```python
 from riak.datatypes import Set
 
 bucket = client.bucket_type('sets').bucket('user_info_sets')
 user_id_set = Set(bucket, 'usernames')
 ```
+<!-- @end -->
 
 >Getting started with Riak clients
 If you are connecting to Riak using one of Basho's official [client
@@ -219,8 +212,7 @@ Then, we can create a function that stores a user record's key in that
 set every time a record is created:
 
 
-#### Java
-
+<!-- @codeBlock -->
 ```java
 // A User class for constructing user records
 class User {
@@ -255,9 +247,6 @@ public void storeUserRecord(User user) throws Exception {
   client.execute(update);
 }
 ```
-
-#### Ruby
-
 ```ruby
 class User
   attr_accessor :username, :info
@@ -276,10 +265,6 @@ def store_record(user)
   user_id_set.add(user.username)
 end
 ```
-
-
-#### PHP
-
 ```php
 class User
 {
@@ -308,9 +293,6 @@ function store_user(User $user)
     ->execute();
 }
 ```
-
-##### Python
-
 ```python
 class User:
     def __init__(self, username, info):
@@ -331,14 +313,14 @@ def store_record(user):
     user_id_set.add(username)
     user_id_set.store()
 ```
+<!-- @end -->
 
 Now, let's say that we want to be able to pull up all user records in
 the bucket at once. We could do so by iterating through the usernames
 stored in our set and then fetching the object corresponding to each
 username:
 
-#### Java
-
+<!-- @codeBlock -->
 ```java
 public Set<User> fetchAllUserRecords() {
     // Empty builder sets for usernames and User objects
@@ -364,9 +346,6 @@ public Set<User> fetchAllUserRecords() {
     return userSet;
 }
 ```
-
-#### Ruby
-
 ```ruby
 # Using the "user_id_set" set from above
 
@@ -380,9 +359,6 @@ def fetch_all_user_records
   user_records
 end
 ```
-
-#### PHP
-
 ```php
 function fetch_users()
 {
@@ -406,9 +382,6 @@ function fetch_users()
   return $users;
 }
 ```
-
-#### Python
-
 ```python
 # We'll create a generator object that will yield a list of Riak objects
 def fetch_all_user_records():
@@ -420,6 +393,7 @@ def fetch_all_user_records():
 # We can retrieve that list of Riak objects later on
 list(fetch_all_user_records())
 ```
+<!-- @end -->
 
 <!-- @section -->
 
@@ -434,8 +408,7 @@ object with an inappropriate key is stored in that bucket, it won't even
 be seen by your application because it will only ever query keys that
 begin with `user_`:
 
-#### Java
-
+<!-- @codeBlock -->
 ```java
 // Assuming that we've created a class User:
 
@@ -449,9 +422,6 @@ public User getUserByUsername(String username) {
     return userObject;
 }
 ```
-
-#### Ruby
-
 ```ruby
 def get_user_by_username(username)
   bucket = client.bucket('users')
@@ -459,9 +429,6 @@ def get_user_by_username(username)
   return obj.raw_data
 end
 ```
-
-#### PHP
-
 ```php
 function fetchUser($user_name)
 {
@@ -473,15 +440,13 @@ function fetchUser($user_name)
     return $response->getObject()->getData();
 }
 ```
-
-#### Python
-
 ```python
 def get_user_by_username(username):
   bucket = client.bucket('users')
   obj = bucket.get('user_{}'.format(username))
   return obj.data
 ```
+<!-- @end -->
 
 <!-- @section -->
 
@@ -502,8 +467,6 @@ the same configuration but have different names.
 Here's an example of creating four bucket types that only extend Riak's
 defaults:
 
-#### Shell
-
 ```bash
 riak-admin bucket-type create john
 riak-admin bucket-type create robert
@@ -513,8 +476,6 @@ riak-admin bucket-type create john-paul
 
 Or you can create five different bucket types that all set `n_val` to 2
 but have different names:
-
-#### Shell
 
 ```bash
 riak-admin bucket-type create earth '{"props":{"n_val":2}}'
@@ -549,8 +510,6 @@ GET/PUT/DELETE /types/<good or bad>/buckets/<season>/keys/<episode number>
 That adds an additional layer of namespacing and enables us to think
 about our data in terms of a deeper hash than in the example above:
 
-#### Ruby
-
 ```ruby
 simpsons = {
   'good': {
@@ -569,8 +528,6 @@ simpsons = {
 ```
 
 We can fetch the title of season 8, episode 6:
-
-#### Ruby
 
 ```ruby
 # For the sake of example, we'll classify season 8 as good:
